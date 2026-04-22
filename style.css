@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #f9f9f9;
+}
+
+/* HEADER */
+header {
+    background: #fff;
+    padding: 15px 5%;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 span { color: #e67e22; }
+
+.nav-links { display: flex; list-style: none; }
+.nav-links li { margin: 0 15px; }
+.nav-links a { text-decoration: none; color: #333; font-weight: 600; }
+
+.cart-wrapper {
+    background: #f4f4f4;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+/* HERO */
+.hero {
+    background: #2c3e50;
+    color: #fff;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+/* GRID 2 KOLOM */
+.container { padding: 30px 5%; max-width: 1200px; margin: auto; }
+.section-title { text-align: center; margin-bottom: 30px; }
+
+.product-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2 Kolom */
+    gap: 20px;
+}
+
+/* CARD PRODUK */
+.product-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* TULISAN DI TENGAH */
+.product-info {
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.product-info h3 {
+    font-size: 1rem;
+    min-height: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.price {
+    font-weight: bold;
+    color: #e67e22;
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+.btn-add {
+    width: 100%;
+    padding: 10px;
+    background: #2c3e50;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #2c3e50;
+    color: #fff;
+    margin-top: 40px;
+}
+
+/* HP RESPONSIVE */
+@media (max-width: 480px) {
+    .product-card img { height: 180px; }
+    .product-info h3 { font-size: 0.9rem; }
+}

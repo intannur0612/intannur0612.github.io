@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KemejaStore | Katalog Resmi 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>Kemeja<span>Store</span></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#katalog">Koleksi</a></li>
+                <li><a href="#kontak">Kontak</a></li>
+            </ul>
+            <div class="nav-icons">
+                <div class="cart-wrapper">
+                    🛒 <span id="cart-count">0</span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="hero-text">
+            <h2>Koleksi Kemeja Premium</h2>
+            <p>Bahan Oxford & Rayon terbaik untuk gaya maksimal Anda.</p>
+        </div>
+    </section>
+
+    <main class="container" id="katalog">
+        <h2 class="section-title">Katalog Produk</h2>
+        <div class="product-grid">
+            
+            <article class="product-card">
+                <img src="Gambar/Gambar1.jpg" alt="Kemeja Oxford">
+                <div class="product-info">
+                    <h3>Kemeja Oxford</h3>
+                    <span class="price">Rp 199.000</span>
+                    <button class="btn-add">Beli Sekarang</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="Gambar/Gambar 2.jpg" alt="Kemeja Rayon">
+                <div class="product-info">
+                    <h3>Kemeja Rayon</h3>
+                    <span class="price">Rp 145.000</span>
+                    <button class="btn-add">Beli Sekarang</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="Gambar/Gambar 3.jpg" alt="Kemeja Crinkle">
+                <div class="product-info">
+                    <h3>Kemeja Crinkle</h3>
+                    <span class="price">Rp 129.000</span>
+                    <button class="btn-add">Beli Sekarang</button>
+                </div>
+            </article>
+
+            <article class="product-card">
+                <img src="Gambar/Gambar 4.jpg" alt="Kemeja Flanel">
+                <div class="product-info">
+                    <h3>Kemeja Flanel</h3>
+                    <span class="price">Rp 175.000</span>
+                    <button class="btn-add">Beli Sekarang</button>
+                </div>
+            </article>
+
+        </div>
+    </main>
+
+    <footer id="kontak">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Hubungi Kami</h4>
+                <p>📞 WA: <a href="https://wa.me/6281234567890">0812-3456-7890</a></p>
+                <p>📧 Email: <a href="mailto:admin@kemejastore.com">admin@kemejastore.com</a></p>
+            </div>
+            <div class="footer-section">
+                <h4>Lokasi</h4>
+                <p>Bandung, Jawa Barat</p>
+                <p>Indonesia</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 KemejaStore Official. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        let count = 0;
+        const cartDisplay = document.getElementById('cart-count');
+        const buttons = document.querySelectorAll('.btn-add');
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                count++;
+                cartDisplay.innerText = count;
+                
+                const originalText = button.innerText;
+                button.innerText = "Berhasil!";
+                button.style.backgroundColor = "#2ecc71";
+                
+                setTimeout(() => {
+                    button.innerText = originalText;
+                    button.style.backgroundColor = "";
+                }, 800);
+            });
+        });
+    </script>
+</body>
+</html>
